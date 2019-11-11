@@ -13,6 +13,7 @@ namespace EducationPortalASP.Models
         public virtual DbSet<Course> Courses { get; set; }
         public virtual DbSet<Moderator> Moderators { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<UserCourse> UserCourses { get; set; }
        
     }
 }

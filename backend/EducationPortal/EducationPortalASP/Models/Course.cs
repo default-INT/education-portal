@@ -8,12 +8,8 @@ namespace EducationPortalASP.Models
 {
     public class Course
     {
-        public Course() {
-            Users = new HashSet<User>();
-        }
         public int Id { get; set; }
         public string Name { get; set; }
-
         public User User { get; set; }
         public string Subject { get; set; }
         public double Rating { get; set; }
@@ -23,8 +19,10 @@ namespace EducationPortalASP.Models
         public DateTime EndDate { get; set; } //дата конца курса
 
 
-        public int UserId { get; set; }
-        public virtual ICollection<User> Users { get; set; }
-
+        public virtual ICollection<UserCourse> Users { get; set; }
+        public Course()
+        {
+            Users = new HashSet<UserCourse>();
+        }
     }
 }
