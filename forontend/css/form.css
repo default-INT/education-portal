@@ -1,0 +1,96 @@
+#main{
+	width: 100%;
+	height: 800px;
+}
+
+main article{
+	background: white;
+	border-radius: 30px;
+	max-width: 1200px;
+	min-width: 500px;
+	padding-bottom: 40px;
+	margin: 15px auto;
+	padding-top: 20px;
+	align-items: center;
+}
+
+article h2{
+	font-size: 38pt;
+	margin-left: 25px;
+	top: 55px;
+	color: #57626F;
+	text-align: center;
+}
+
+hr{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: 0;
+	height: 1px;
+	background: #000;
+	background-image: -webkit-linear-gradient(left, #fff, #000, #fff);
+	background-image: -moz-linear-gradient(left, #fff, #000, #fff);
+	background-image: -ms-linear-gradient(left, #fff, #000, #fff);
+    background-image: -o-linear-gradient(left, #fff, #000, #fff);
+}
+
+input:focus {
+	outline: none;
+}
+
+.enter_form ul li{
+	/*margin-top: 10px;*/
+	margin: 15px auto auto 10px;
+	font-size: 22pt;
+}
+
+input[type="text"], 
+input[type="password"], select {
+  width: 400px;
+  height: 40px;
+  padding: 10px 15px;
+  border-width: 0;
+  background: #e6e6e6;
+  outline: none;
+  margin-top: 8px;
+  margin: 15px auto auto 10px;
+  font-size: 22pt;
+  transition: .8s ease;
+  font-family: ms sans serif;
+}
+
+select{
+	width: 430px;
+	height: 60px;
+	cursor: pointer;
+}
+
+input[type="text"]:focus, 
+input[type="password"]:focus,
+select:focus{
+  box-shadow: inset 0 0 0 2px rgba(0,0,0,.4);
+}
+
+button {
+  padding: 10px 0;
+  border-width: 0;
+  display: block;
+  width: 200px;
+  margin: 25px 15px 0;
+  background: #60e6c5;
+  color: white;
+  font-size: 32px;
+  outline: none;
+  text-transform: uppercase;
+}
+
+button:hover{
+	background: #549081;
+	cursor: pointer;
+}
+
+ul{
+	display: table;
+	list-style-type: none;
+	margin: 15px auto;
+}

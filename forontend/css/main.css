@@ -1,0 +1,413 @@
+@font-face {
+	font-family: "GTWalsheimPro";  
+	src: url("../fonts/GTWalsheimPro.otf") format("truetype"); 
+	font-style: normal; 
+	font-weight: normal;
+ }
+
+*{
+	padding: 0;
+	margin: 0;
+	font-family: "GTWalsheimPro";
+
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	transition: 0.3s ease;
+}
+
+a:hover{
+	color: #ff6e6e;
+}
+
+/*
+ *Начало header
+ */
+
+body{
+	background: #f5f5f5;
+}
+
+header h1{
+	position: absolute;
+	top: 15px;
+	left: 80px;
+	color: white;
+	font-size: 38pt;
+}
+
+header{
+	position: absolute;
+	height: 100px;
+	width: 100%;
+	background: #6ACAB4;
+	text-transform: none;
+}
+
+/*user menu*/
+#user{
+	display: block;
+	height: 100%;
+	width: 400px;
+	position: absolute;
+	padding: 0px 0px 0px 20px;
+	margin: 0 0 0 0;
+	color: white;
+	font-size: 38pt;
+	right: 0px;
+	border-left: 2px solid #E0E5EA;
+	transition: 0.3s ease;
+}
+
+#user i{
+	width: 100%;
+	margin-top: 20px;
+}
+
+.fa-user-o:before {
+  float: left;
+	padding-right: 15px;
+}
+
+#user i a, #user i li{
+	top: 0px;
+	text-decoration: none;
+	list-style: none;
+	color: inherit;
+}
+
+#user:hover{
+	background: #E0E5EA;
+	color: #57626F;	
+	cursor: pointer;
+}
+
+.submenu {
+  background: #0f7d64;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 5;
+  width: 180px;
+	font-size: 20px;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: 0 0;
+  transition: .5s ease-in-out;
+}
+.submenu a {	
+  color: white;
+  text-align: left;
+  padding: 20px 60px;
+  font-size: 26px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+a li ul{	
+	background: white;
+}
+
+li ul li a{
+	display: inline-block;
+	width: 100%;
+}
+
+.submenu li:last-child a { border-bottom: none; }
+
+li:hover .submenu {
+  opacity: 1;
+	color: white;
+  transform: scaleY(1);
+}
+
+
+/*end user menu*/
+
+#sidebar {
+	position: fixed;
+	width: 250px;
+	height: 100%;
+	background: #0D9173;
+	border-right: 4px solid #E0E5EA;
+	left: -254px;
+
+	-moz-transition: all 300ms;
+	-webkit-transition: all 300ms;
+	transition: all 300ms;
+}
+
+#sidebar.active{
+	left: 0px;
+	z-index: 1;
+}
+
+#sidebar ul li:first-child {
+	text-align: center;
+	color: white;
+	font-size: 1.95em;
+	list-style: none;
+	padding: 25px 10px 10px 10px;
+}
+
+#sidebar ul li:not(:first-child) {
+	width: 90%;
+	margin-left: 5%;
+	font-size: 1.2em;
+	list-style: none;
+	padding: 15px 10px;
+}
+
+#sidebar ul li a {
+	color: #dfe5ed;
+	text-decoration: none;
+}
+
+#sidebar ul li a:hover {
+	color: #59e9df;
+}
+
+#sidebar .toggle-btn {
+	position: absolute;
+	left: 270px;
+	top: 20px;
+	background: #21b397;
+	padding: 10px;
+	border-radius: 12px;
+	cursor: pointer;
+}
+
+#sidebar .toggle-btn span{
+	display: block;
+	width: 25px;
+	height: 4px;
+	background-color: #6acab4;
+	margin: 4px 0;
+}
+
+
+#sidebar .toggle-btn:hover {background: #556270}
+#sidebar .toggle-btn:hover span {background: #fafafa}
+
+/*
+ *Конец header
+ ---------------
+ *Начало main
+ */
+#main{
+	position: absolute;
+	top: 100px;
+	width: 100%;
+}
+
+content{
+	height: 100%;
+	width: 1100px;
+	border-radius: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	background: white;
+	margin-top: 50px;
+	display: block;
+	overflow: hidden;
+	/*! align-content: center; */
+}
+
+.container{
+	margin: 100px 15% 0 15%;  
+	display: grid;
+	grid-template-columns: 	1fr 1fr 1fr;
+	grid-template-rows: repeat(3, 200px);
+	transition: 0.3s ease;
+	grid-gap: 20px;
+}
+
+.container a{
+	background: #4a76a8;
+	color: white;
+	font-size: 36pt;
+	text-align: center;
+	text-decoration: none;
+	padding-top: 10%;
+	transition: 0.3s ease;
+}
+
+.container a:hover{
+	transform: scale(1.05);
+	cursor: pointer;
+}
+/*
+* input form
+*/
+input:focus {
+	outline: none;
+}
+
+.enter_form ul li{
+	list-style-type: none;
+	/*margin-top: 10px;*/
+	margin-left: 15px; 
+	margin-bottom: 10px;
+	font-size: 22pt;
+}
+
+input[type="text"], input[type="password"] {
+  width: 70%;
+  padding: 10px 15px;
+  border-width: 0;
+  background: #e6e6e6;
+  outline: none;
+  margin-top: 8px;
+  font-size: 22pt;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  box-shadow: inset 0 0 0 2px rgba(0,0,0,.2);
+}
+
+filter{
+	width: 100%;
+	height: 150px;
+	display: block;
+	border-bottom: 4px solid #E0E5EA;
+}
+
+.fa-search:before{
+	font-size: 30px;
+}
+
+filter label{
+	width: 100%;
+	text-align: center;
+	font-size: 38px;
+	display: block;
+}
+
+.course-filter input{
+	margin-left: 20px;
+	margin-top: 20px;
+	transition: 0.3s ease;
+}
+
+.course-filter button {
+	margin-left: 10px;
+	width: 185px;
+	padding-top: 6px;
+	padding-bottom: 7px;
+	border-radius: 0px;
+	background: #214cb3;
+	border: 0px;
+	font-size: 25pt;
+	color: white;
+	overflow: hidden;	
+}
+
+button:hover {
+	background: wheat;
+	cursor: pointer;
+}
+
+.course-list-container{
+	width: 100%;
+	/*! display: grid; */
+	
+	display: grid;
+	grid-template-columns: 	1fr;
+	grid-template-rows: repeat(3, 200px);
+	transition: 0.3s ease;
+}
+
+.fa-book:before {
+	font-size: 120pt
+}
+
+.course-list-container .item {
+	
+	width: 100%;
+	border-bottom: 3px whitesmoke solid;
+	position: relative;
+	float: left;
+}
+
+.item {
+	display: grid;
+	grid-template-columns: 	180px auto 120px;
+	grid-template-rows: repeat(3, 200px);
+	overflow: hidden;
+}
+
+.item .item-icon {
+	padding-top: 10px;
+  padding-left: 15px;
+	color: #4a76a8;
+	border-right: 3px whitesmoke solid;
+}
+
+.item * {
+	display: inline-block;
+	height: 100%;
+}
+
+.item-content #title {
+	width: 100%;
+	height: 60px;
+	font-size: 32pt;
+	padding-left: 30px;
+	color: #4a76a8;
+}
+
+.item-content #descript {
+	margin-left: 10px;
+	width: 100%;
+	height: 100px;
+}
+
+.item-content #teacher {
+	margin-left: 50px;
+}
+
+.item-content #teacher a{
+	color: green;
+}
+
+.item .fast-info {
+	padding-left: 10px;
+	border-left: 3px solid whitesmoke;
+}
+
+.fast-info * {
+	margin-top: 15px;
+	width: 100%;
+	height: 50px;
+	
+}
+
+.fast-info label * {
+	width: 20px;
+}
+
+.fa-star:before {
+	color: gold;
+}
+
+.fa-users:before {
+	color: #4a76a8;
+}
+
+.fa-money:before {
+	color: green;
+}
+
+.item-content  { 
+	/*! width: 800px; */
+	
+}
+
+.item .item-content #fast-info {
+	display: inline-block;
+	float: right;
+}
+/*
+ *Конец main
+ */
