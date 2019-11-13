@@ -1,0 +1,90 @@
+#icon i{
+  color: #4a76a8;
+}
+
+#icon * {
+  display: block;
+  text-align: center;
+}
+
+#icon .inner-fast-info * {
+  margin-top: 20px;
+}
+
+#icon .inner-fast-info *:last-child {
+  margin-top: 5px;
+}
+
+.course-main-info * {
+  vertical-align: top;
+  display: inline-block;
+}
+
+.course-main-info #content {
+  width: 80%;
+}
+
+#content #title {
+  margin-left: 60px;
+  font-size: 55pt;
+  margin-bottom: 30px;
+}
+
+#content * {
+  font-size: 20pt;
+  text-align: justify;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+#content * p {
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 2px;
+  padding-bottom: 10px;
+  border-bottom: 3px whitesmoke solid;
+}
+
+.course-page .course-main-info #icon{
+  margin-top: 110px;
+  margin-left: 20px;
+}
+
+.course-lesson * {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.lesson-content {
+  width: 100%;
+  border-bottom: 5px whitesmoke solid;
+}
+
+.course-lesson .lesson-content #title{
+  font-size: 32pt;
+  width: 100%;
+  padding-left: 70px;
+  padding-bottom: 12px;
+  border-bottom: 4px whitesmoke dotted;
+}
+
+.lesson-content #lesson-icon {
+  width: 150px;
+  margin-left: 8px;
+  float: left;
+  position: relative;
+}
+
+.lesson-content #dificult {
+  width: 85%;
+  text-align: right;
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.lesson-content #descript {
+  font-size: 26px;
+  text-align: justify;
+  width: 85%;
+}

@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Learning\\Hacaton_First_Project\\EducationPortal\\EducationPortalASP\\EducationPortalASP.csproj": {}
+    "E:\\Other\\GSTU\\work\\hackathon\\education-portal\\backend\\EducationPortal\\EducationPortalASP\\EducationPortalASP.csproj": {}
   },
   "projects": {
-    "D:\\Learning\\Hacaton_First_Project\\EducationPortal\\EducationPortalASP\\EducationPortalASP.csproj": {
+    "E:\\Other\\GSTU\\work\\hackathon\\education-portal\\backend\\EducationPortal\\EducationPortalASP\\EducationPortalASP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Learning\\Hacaton_First_Project\\EducationPortal\\EducationPortalASP\\EducationPortalASP.csproj",
+        "projectUniqueName": "E:\\Other\\GSTU\\work\\hackathon\\education-portal\\backend\\EducationPortal\\EducationPortalASP\\EducationPortalASP.csproj",
         "projectName": "EducationPortalASP",
-        "projectPath": "D:\\Learning\\Hacaton_First_Project\\EducationPortal\\EducationPortalASP\\EducationPortalASP.csproj",
-        "packagesPath": "C:\\Users\\EcLiPsE\\.nuget\\packages\\",
-        "outputPath": "D:\\Learning\\Hacaton_First_Project\\EducationPortal\\EducationPortalASP\\obj\\",
+        "projectPath": "E:\\Other\\GSTU\\work\\hackathon\\education-portal\\backend\\EducationPortal\\EducationPortalASP\\EducationPortalASP.csproj",
+        "packagesPath": "C:\\Users\\default.DESKTOP-JIQ6PTE\\.nuget\\packages\\",
+        "outputPath": "E:\\Other\\GSTU\\work\\hackathon\\education-portal\\backend\\EducationPortal\\EducationPortalASP\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\EcLiPsE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\default.DESKTOP-JIQ6PTE\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,9 +42,21 @@
               "target": "Package",
               "version": "[3.0.0, )"
             },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.0.0, )"
             },

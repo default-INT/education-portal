@@ -3,11 +3,45 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - EducationPortalASP</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <title>@ViewData["Title"] - OpenMyCourse</title>
+
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/main.css" />
+    <link rel="stylesheet" href="~/css/font-awesome.css" />
+    <link rel="stylesheet" href="~/css/profile.css" />
 </head>
 <body>
+    <header>
+        <h1>OpenMyCourse</h1>
+        <div id="sidebar">
+            <div class="toggle-btn" onclick="openMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li>МЕНЮ</li>
+                <li><a asp-area="" asp-controller="Home">Главная</a></li>
+                <li><a href="main/employees">Список моих курсов</a></li>
+                <li><a href="main/employee-info">Список всех курсов</a></li>
+                <li><a href="contacts">Контакты</a></li>
+                <li><a href="about">Про нас</a></li>
+            </ul>
+        </div>
+        <div id="user">
+            <i class="fa fa-user-o" aria-hidden="true">
+                <li>
+                    <a asp-area="" asp-controller="Profile" class="submenu-link">Пользователь</a>
+                    <ul class="submenu" style="width: 100%">
+                        <li><a href="user.html">Профиль</a></li>
+                        <li><a href="user-courses.html">Список курсов</a></li>
+                        <li><a href="">Выход</a></li>
+                    </ul>
+                </li>
+            </i>
+        </div>
+    </header>
+    <!--
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
@@ -29,19 +63,13 @@
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+        -->
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2019 - EducationPortalASP - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <main role="main" id="main">
+        @RenderBody()
+    </main>
+
+    <script src="~/js/main.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>
