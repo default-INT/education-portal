@@ -96,6 +96,7 @@ header{
   transform: scaleY(0);
   transform-origin: 0 0;
   transition: .5s ease-in-out;
+	overflow: hidden;
 }
 .submenu a {	
   color: white;
@@ -112,6 +113,10 @@ a li ul{
 li ul li a{
 	display: inline-block;
 	width: 100%;
+}
+
+li ul li:hover{
+	background: #6ACAB4
 }
 
 .submenu li:last-child a { border-bottom: none; }
@@ -418,8 +423,38 @@ button:hover {
 	float: right;
 }
 /*
- *
+ * title
 */
+
+h2{
+	font-size: 42pt;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	border-bottom: 4px whitesmoke dotted;
+}
+
+#button-create-course {
+	margin-left: 25px;
+	background: #6ACAB4;
+	border: 0px;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 32px;
+	color: white;
+	margin-bottom: 20px;
+}
+
+#button-create-course:hover {background: #ff6e6e}
+
+#msg {
+	text-align: center;
+	width: 100%;
+	margin-top: 10px;
+	font-size: 18pt;
+	margin-bottom: 10px;
+}
 /*
  *Конец main
  */
