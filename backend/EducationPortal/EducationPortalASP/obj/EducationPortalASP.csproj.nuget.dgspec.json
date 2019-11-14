@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Other\\GSTU\\work\\hackathon\\education-portal\\backend\\EducationPortal\\EducationPortalASP\\EducationPortalASP.csproj": {}
+    "D:\\Learning\\Hacaton_First_Project\\education-portal\\backend\\EducationPortal\\EducationPortalASP\\EducationPortalASP.csproj": {}
   },
   "projects": {
-    "E:\\Other\\GSTU\\work\\hackathon\\education-portal\\backend\\EducationPortal\\EducationPortalASP\\EducationPortalASP.csproj": {
+    "D:\\Learning\\Hacaton_First_Project\\education-portal\\backend\\EducationPortal\\EducationPortalASP\\EducationPortalASP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Other\\GSTU\\work\\hackathon\\education-portal\\backend\\EducationPortal\\EducationPortalASP\\EducationPortalASP.csproj",
+        "projectUniqueName": "D:\\Learning\\Hacaton_First_Project\\education-portal\\backend\\EducationPortal\\EducationPortalASP\\EducationPortalASP.csproj",
         "projectName": "EducationPortalASP",
-        "projectPath": "E:\\Other\\GSTU\\work\\hackathon\\education-portal\\backend\\EducationPortal\\EducationPortalASP\\EducationPortalASP.csproj",
-        "packagesPath": "C:\\Users\\default.DESKTOP-JIQ6PTE\\.nuget\\packages\\",
-        "outputPath": "E:\\Other\\GSTU\\work\\hackathon\\education-portal\\backend\\EducationPortal\\EducationPortalASP\\obj\\",
+        "projectPath": "D:\\Learning\\Hacaton_First_Project\\education-portal\\backend\\EducationPortal\\EducationPortalASP\\EducationPortalASP.csproj",
+        "packagesPath": "C:\\Users\\EcLiPsE\\.nuget\\packages\\",
+        "outputPath": "D:\\Learning\\Hacaton_First_Project\\education-portal\\backend\\EducationPortal\\EducationPortalASP\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\default.DESKTOP-JIQ6PTE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\EcLiPsE\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -38,6 +41,14 @@
       "frameworks": {
         "netcoreapp3.0": {
           "dependencies": {
+            "IdentityModel": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.0.0, )"
