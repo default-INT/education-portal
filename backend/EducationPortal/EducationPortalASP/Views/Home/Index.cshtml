@@ -1,6 +1,19 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@model EducationPortalASP.ViewModel.HomeViewModel
+
+@if (Model != null)
+{
+    @section UserSection {
+        <a asp-area="" asp-controller="Profile" class="submenu-link">@Model.User.UserName</a>
+        <ul class="submenu" style="width: 100%">
+            <li><a asp-area="" asp-controller="Profile">Профиль</a></li>
+            <li><a asp-area="" asp-controller="User" asp-action="LogOff">Выход</a></li>
+        </ul>
+    }
+}
+
 <content>
     <filter class="course-filter">
         <label>Список курсов</label>
@@ -10,23 +23,33 @@
         </form>
     </filter>
     <div class="course-list-container">
-        <div class="item">
-            <div class="item-icon">
-                <i class="fa fa-book"></i>
-            </div>
-            <div class="item-content">
-                <div id="title"><a href="course.html">Курс по .NET</a></div>
-                <div id="descript">Данный тренинг посвящен практическому освоению возможностей языка C# и библиотеки .NET. В течение 2 месяцев стажировки участники смогут получить практический опыт в разработке заказного программного обеспечения, поддержания существующих проектов и работы в распределённой команде.</div>
-                <div id="dificult">Сложность: <i class="fa fa-star"> </i><i class="fa fa-star"> </i><i class="fa fa-star"> </i> </div>
-                <div id="teacher">Преподаватель: <a href="">Сидорова Наталья</a></div>
-            </div>
-            <div class="fast-info">
-                <label><i class="fa fa-money"></i>15$</label>
-                <label><i class="fa fa-users"></i>10</label>
-                <label><i class="fa fa-star"> </i><div>5.5</div></label>
-            </div>
+        @foreach (Course course in Model.Courses)
+        {
+            <div class="item">
+                <div class="item-icon">
+                    <i class="fa fa-book" style="color: #6ACAB4"></i>
+                </div>
+                <div class="item-content">
+                    <div id="title"><a asp-action="Course" asp-route-id="@course.Id">@course.Name</a></div>
+                    <div id="descript">@course.Descript</div>
+                    <div id="dificult">
+                        Сложность:
+                        @for (int i = 0; i < (int)course.Dificult; i++)
+                        {
+                            <i class="fa fa-star"> </i>
+                        }
+                    </div>
+                    <div id="teacher">Преподаватель: <a asp-area="" asp-controller="Profile" asp-action="Index">@course.User.FullName</a></div>
+                </div>
+                <div class="fast-info">
+                    <label><i class="fa fa-money"></i>@course.Price $</label>
+                    <label><i class="fa fa-users"></i>@course.Users.Count</label>
+                    <label><i class="fa fa-star"> </i><div>@(new Random().Next(1, 100) / 10)</div></label>
+                </div>
 
-        </div>
+            </div>
+        }
+
         <div class="item">
             <div class="item-icon">
                 <i class="fa fa-book" style="color: red"></i>
@@ -63,12 +86,12 @@
         </div>
     </div>
     <!--
-    <div class="container">
-    <a href = "main/add-employee">ДОБАВИТЬ СОТРУДНИКА </a>
-    <a href = "main/report-day">ОТЧЁТ ЗА ДЕНЬ</a>
-    <a href = "main/stat">СТАТИСТИКА</a>
-    <a href = "main/add-report">ДОБАВИТЬ ОТЧЁТ</a>
-    <a href = "main/delete-employee">УВОЛИТЬ СОТРУДНИКА</a>
--->
+        <div class="container">
+        <a href = "main/add-employee">ДОБАВИТЬ СОТРУДНИКА </a>
+        <a href = "main/report-day">ОТЧЁТ ЗА ДЕНЬ</a>
+        <a href = "main/stat">СТАТИСТИКА</a>
+        <a href = "main/add-report">ДОБАВИТЬ ОТЧЁТ</a>
+        <a href = "main/delete-employee">УВОЛИТЬ СОТРУДНИКА</a>
+    -->
     </div>
 </content>

@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model EducationPortalASP.ViewModel.HomeViewModel
+<content>
+    <div class="course-page">
+        <div class="course-main-info">
+            <div id="icon">
+                <i class="fa fa-book"></i>
+                <div class="inner-fast-info">
+                    <label><i class="fa fa-money"></i>@Model.CourseItem.Price $</label>
+                    <label><i class="fa fa-users"></i>@(new Random().Next(0, 1000))</label>
+                    <label><i class="fa fa-star"> </i><div>@(new Random().Next(0, 100) / 10)</div></label>
+                </div>
+            </div>
+            <div id="content">
+                <div id="title">@Model.CourseItem.Name</div>
+                <div id="descript"><p>Описание курса</p>@Model.CourseItem.Descript</div>
+                <div id="source-lib">
+                    <p>Рекоменлованная литература</p>@Model.CourseItem.Bibliography
+                </div>
+                <div id="hometask">
+                    <p>Домашние задание</p>
+                    @Model.CourseItem.HomeTask
+                </div>
+            </div>
+        </div>
+    </div>
+</content>
+<content>
+    <div class="course-lesson">
+        <div class="lesson-content">
+            <div id="title">Занятие 1</div>
+            <div id="lesson-icon"><img src="../img/lesson1.png" width="150px"></div>
+            <div id="dificult">Сложность <i class="fa fa-star"> </i><i class="fa fa-star"></i></div>
+            <div id="descript">Вводное занятие. Изучение основ ООП. Наследование, полиморфизм, инкапсуляция.</div>
+        </div>
+        <div class="lesson-content">
+            <div id="title">Занятие 2</div>
+            <div id="lesson-icon"><img src="../img/lesson1.png" width="150px"></div>
+            <div id="dificult">Сложность <i class="fa fa-star"> </i><i class="fa fa-star"></i></div>
+            <div id="descript">Создание иерархии классов. Интерфейсы и абстрактные классы.</div>
+        </div>
+    </div>
+</content>

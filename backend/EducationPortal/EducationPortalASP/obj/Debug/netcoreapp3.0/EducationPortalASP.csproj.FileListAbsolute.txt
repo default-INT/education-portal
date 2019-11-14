@@ -300,3 +300,10 @@ D:\Learning\Hacaton_First_Project\education-portal\backend\EducationPortal\Educa
 D:\Learning\Hacaton_First_Project\education-portal\backend\EducationPortal\EducationPortalASP\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\Learning\Hacaton_First_Project\education-portal\backend\EducationPortal\EducationPortalASP\obj\Debug\netcoreapp3.0\EducationPortalASP.MvcApplicationPartsAssemblyInfo.cache
 D:\Learning\Hacaton_First_Project\education-portal\backend\EducationPortal\EducationPortalASP\obj\Debug\netcoreapp3.0\Razor\Views\Shared\Register.cshtml.g.cs
+E:\Other\GSTU\work\hackathon\education-portal\backend\EducationPortal\EducationPortalASP\bin\Debug\netcoreapp3.0\IdentityModel.dll
+E:\Other\GSTU\work\hackathon\education-portal\backend\EducationPortal\EducationPortalASP\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+E:\Other\GSTU\work\hackathon\education-portal\backend\EducationPortal\EducationPortalASP\obj\Debug\netcoreapp3.0\Razor\Views\User\Register.cshtml.g.cs
+E:\Other\GSTU\work\hackathon\education-portal\backend\EducationPortal\EducationPortalASP\obj\Debug\netcoreapp3.0\Razor\Views\User\Registration.cshtml.g.cs
+E:\Other\GSTU\work\hackathon\education-portal\backend\EducationPortal\EducationPortalASP\obj\Debug\netcoreapp3.0\Razor\Views\User\Login.cshtml.g.cs
+E:\Other\GSTU\work\hackathon\education-portal\backend\EducationPortal\EducationPortalASP\obj\Debug\netcoreapp3.0\Razor\Views\Course\Create.cshtml.g.cs
+E:\Other\GSTU\work\hackathon\education-portal\backend\EducationPortal\EducationPortalASP\obj\Debug\netcoreapp3.0\Razor\Views\Home\Course.cshtml.g.cs

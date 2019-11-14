@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using EducationPortalASP.Data;
 
 namespace EducationPortalASP
 {
@@ -24,8 +25,17 @@ namespace EducationPortalASP
             string connection = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<EducationPortalContext>(options => options.UseNpgsql(connection));
 
-            services.AddIdentity<Account, IdentityRole>()
-                .AddEntityFrameworkStores<EducationPortalContext>();
+            services.AddIdentity<Account, IdentityRole>(
+                opts =>
+                {
+                    opts.Password.RequiredLength = 5;   // минимальная длина
+                    opts.Password.RequireNonAlphanumeric = false;   // требуются ли не алфавитно-цифровые символы
+                    opts.Password.RequireLowercase = false; // требуются ли символы в нижнем регистре
+                    opts.Password.RequireUppercase = false; // требуются ли символы в верхнем регистре
+                    opts.Password.RequireDigit = false;
+                }) 
+                .AddEntityFrameworkStores<EducationPortalContext>()
+                .AddDefaultTokenProviders();
 
             services.AddMvc();
         }
@@ -46,6 +56,7 @@ namespace EducationPortalASP
             app.UseStaticFiles();
             app.UseRouting();
             app.UseAuthorization();
+            
 
             app.UseEndpoints(endpoints =>
             {

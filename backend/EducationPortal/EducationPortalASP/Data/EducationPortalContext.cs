@@ -2,8 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System.IO;
+using EducationPortalASP.Models;
 
-namespace EducationPortalASP.Models
+namespace EducationPortalASP.Data
 {
     public class EducationPortalContext : IdentityDbContext
     {

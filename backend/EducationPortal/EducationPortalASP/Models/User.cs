@@ -13,9 +13,9 @@ namespace EducationPortalASP.Models
         public string Skills { get; set; } 
         public string Rating { get; set; }
         public string Sertificate { get; set; }
-        public double Dificult { get; set; }
+        public string Education { get; set; }
 
-        
+
         public virtual ICollection<UserCourse> Courses { get; set; }
         public User()
         {

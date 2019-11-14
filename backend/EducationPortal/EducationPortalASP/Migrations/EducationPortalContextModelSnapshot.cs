@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
+using EducationPortalASP.Data;
 
 namespace EducationPortalASP.Migrations
 {
@@ -349,8 +350,8 @@ namespace EducationPortalASP.Migrations
                 {
                     b.HasBaseType("EducationPortalASP.Models.Account");
 
-                    b.Property<double>("Dificult")
-                        .HasColumnType("double precision");
+                    b.Property<string>("Education")
+                        .HasColumnType("text");
 
                     b.Property<string>("FullName")
                         .HasColumnName("User_FullName")

@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - OpenMyCourse</title>
 
-    <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/main.css" />
     <link rel="stylesheet" href="~/css/font-awesome.css" />
     <link rel="stylesheet" href="~/css/profile.css" />
+    <link rel="stylesheet" href="~/css/create-form.css" />
+    <link rel="stylesheet" href="~/css/course.css" />
 </head>
 <body>
     <header>
-        <h1>OpenMyCourse</h1>
+        <h1><a asp-area="" asp-controller="Home"  asp-action="Index">OpenMyCourse</a></h1>
         <div id="sidebar">
             <div class="toggle-btn" onclick="openMenu()">
                 <span></span>
@@ -21,7 +22,7 @@
             </div>
             <ul>
                 <li>МЕНЮ</li>
-                <li><a asp-area="" asp-controller="Home">Главная</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="Index">Главная</a></li>
                 <li><a href="main/employees">Список моих курсов</a></li>
                 <li><a href="main/employee-info">Список всех курсов</a></li>
                 <li><a href="contacts">Контакты</a></li>
@@ -31,39 +32,24 @@
         <div id="user">
             <i class="fa fa-user-o" aria-hidden="true">
                 <li>
-                    <a asp-area="" asp-controller="Profile" class="submenu-link">Пользователь</a>
-                    <ul class="submenu" style="width: 100%">
-                        <li><a href="user.html">Профиль</a></li>
-                        <li><a href="user-courses.html">Список курсов</a></li>
-                        <li><a href="">Выход</a></li>
-                    </ul>
+                    @if (IsSectionDefined("UserSection"))
+                    {
+                        @RenderSection("UserSection")
+                    }
+                    else
+                    {
+                        <a asp-area="" asp-controller="Profile" class="submenu-link">Гость</a>
+                        <ul class="submenu" style="width: 100%">
+                            <li><a asp-area="" asp-controller="User" asp-action="Login">Войти</a></li>
+                            <li><a asp-controller="User" asp-action="Registration">Зарегистрироваться</a></li>
+                        </ul>
+                    }
+
                 </li>
             </i>
         </div>
     </header>
-    <!--
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">EducationPortalASP</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-        -->
+   
 
     <main role="main" id="main">
         @RenderBody()

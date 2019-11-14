@@ -17,13 +17,15 @@ namespace EducationPortalASP.Controllers
             this.userManager = userManager;
             this.signInManager = signInManager;
         }
+
         [HttpGet]
         public IActionResult Register()
         {
             return View();
         }
+
         [HttpPost]
-        public async Task<IActionResult> Register(RegisterViewModel model)
+        public async Task<IActionResult> Register(RegistrationViewModel model)
         {
             if (ModelState.IsValid)
             {
@@ -32,7 +34,7 @@ namespace EducationPortalASP.Controllers
                 if (result.Succeeded)
                 {
                     await signInManager.SignInAsync(account, false);
-                    return RedirectToAction("Home", "Index");
+                    return RedirectToAction("Home");
                 }
                 else
                 {

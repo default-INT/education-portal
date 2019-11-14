@@ -1,0 +1,42 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model EducationPortalASP.ViewModel.CourseViewModel
+
+    <content>
+
+        <div class="load-img-block">
+            <label id="title">Создание нового курса</label>
+            <img src="~/img/upload.png">
+            <img src="~/img/upload.png" style="width: 180px">
+            <img src="~/img/upload.png" style="width: 120px">
+            <img src="~/img/upload.png" style="width: 90px">
+        </div>
+        <div class="create-form">
+
+            <div class="input-form">
+                <form class="enter_form" method="post" asp-controller="Course" asp-action="Create">
+                    <div class="input-content">
+                        <label>Введите название курса</label>
+                        <input type="text" placeholder="Название курса" asp-for="Name">
+                        <label>Введите описание курса</label>
+                        <textarea asp-for="Description" type="text" rows="8" placeholder="Описание курса"></textarea>
+                        <label>Добавьте список рекомендованной литературы (необязательно)</label>
+                        <textarea asp-for="Bibliography" type="text" rows="3" placeholder="Гилберт Шилд 'Полное руководство по Java'; Рихтер 'CLR via C#' "></textarea>
+                        <label>Ссылка на github с дз (необязательно)</label>
+                        <input asp-for="HomeTask" type="text" placeholder="https://github.com/">
+                        <label>Введите уровень сложности курса</label>
+                        <input asp-for="Dificult" type="text" placeholder="от 1 до 5">
+                        <label>Стоимость курса / Тариф (необязательно)</label>
+                        <input asp-for="Price" type="text" placeholder="В $">
+                        <div asp-validation-summary="ModelOnly"></div>
+                    </div>
+                    <button style="background: green"><i aria-hidden="true" class="fa fa-search"> </i> Добавить</button>
+                </form>
+            </div>
+
+        </div>
+
+    </content>

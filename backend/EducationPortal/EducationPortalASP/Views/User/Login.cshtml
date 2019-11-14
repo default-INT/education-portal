@@ -1,0 +1,22 @@
+﻿@model EducationPortalASP.ViewModel.LoginViewModel
+
+<content style="width: 550px">
+
+    <h2 id="title">Регистрация</h2>
+    <div class="create-form">
+
+        <div class="input-form" style="width: 100%;">
+            <form class="enter_form" asp-controller="User" asp-action="Login">
+                
+                <div class="input-content">
+                    <input asp-for="Email" type="text" placeholder="Логин">
+                    <input asp-for="Password" type="password" placeholder="Пароль">
+                </div>
+                <div id="msg" style="color: red" asp-validation-summary="ModelOnly"></div>
+                <button name="registration" style="background: green; width: 430px; margin-left: 50px; margin-top: 20px"><i aria-hidden="true" class="fa fa-search"> </i> Войти</button>
+            </form>
+        </div>
+
+    </div>
+
+</content>

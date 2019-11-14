@@ -1,0 +1,40 @@
+﻿@model EducationPortalASP.ViewModel.RegistrationViewModel
+
+    <content style="width: 550px">
+        <!--
+    <div class="choice-list">
+        <label id="now-course"><a href="">Текущие курсы</a></label>
+        <label id="complete-course"><a href="">Пройденные курсы</a></label>
+        <label id="my-course"><a href="">Мои курсы</a></label>
+    </div>
+    -->
+        <h2 id="title">Регистрация</h2>
+        <div class="create-form">
+
+            <div class="input-form">
+                <form class="enter_form" method="post" asp-controller="User" asp-action="Registration">
+                    <div class="input-content">
+                        <input asp-for="Login" type="text" placeholder="Логин">
+                        <span asp-validation-for="Login"></span>
+                        <input asp-for="FullName" type="text" placeholder="ФИО">
+                        <span asp-validation-for="FullName"></span>
+                        <input asp-for="Email" type="text" placeholder="email@gstu.by">
+                        <span asp-validation-for="Email"></span>
+                        <input asp-for="Password" type="password" placeholder="Пароль">
+                        <span asp-validation-for="Password"></span>
+                        <input asp-for="PasswordConfirm" type="password" placeholder="Подтвердите пароль">
+                        <span asp-validation-for="PasswordConfirm"></span>
+                        <textarea asp-for="Skills" type="text" rows="3" placeholder="Навыки"></textarea>
+                        <span asp-validation-for="Skills"></span>
+                        <input asp-for="Sertificate" type="text" placeholder="Сертификат">
+                        <span asp-validation-for="Sertificate"></span>
+                        <input asp-for="Education" type="text" placeholder="Образование">
+                        <div asp-validation-summary="ModelOnly"></div>
+                    </div>
+                    <button type="submit" name="registration" style="background: green; width: 400px; margin-left: 50px;"><i aria-hidden="true" class="fa fa-search"> </i> Зарегистрироваться</button>
+                </form>
+            </div>
+
+        </div>
+
+    </content>
