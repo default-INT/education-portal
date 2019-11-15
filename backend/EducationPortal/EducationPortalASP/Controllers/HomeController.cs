@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using EducationPortalASP.ViewModel;
 using EducationPortalASP.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace EducationPortalASP.Controllers
 {
@@ -33,7 +34,7 @@ namespace EducationPortalASP.Controllers
             {
                 User = userManager.Users.Where(u => u.UserName.Equals(User.Identity.Name))
                                   .FirstOrDefault(),
-                Courses = db.Courses.Take(50).ToList()
+                Courses = db.Courses.Take(50).Include("User")
             };
             return View(model);
         }
@@ -42,6 +43,8 @@ namespace EducationPortalASP.Controllers
         {
             HomeViewModel model = new HomeViewModel()
             {
+                User = userManager.Users.Where(u => u.UserName.Equals(User.Identity.Name))
+                                  .FirstOrDefault(),
                 CourseItem = db.Courses.Where(c => c.Id == id).FirstOrDefault()
             };
             return View(model);

@@ -4,6 +4,18 @@
 @{
 }
 @model EducationPortalASP.ViewModel.HomeViewModel
+
+@if (Model.User != null)
+{
+    @section UserSection {
+        <a asp-area="" asp-controller="Profile" class="submenu-link">@Model.User.UserName</a>
+        <ul class="submenu" style="width: 100%">
+            <li><a asp-area="" asp-controller="Profile">Профиль</a></li>
+            <li><a asp-area="" asp-controller="User" asp-action="LogOff">Выход</a></li>
+        </ul>
+    }
+}
+
 <content>
     <div class="course-page">
         <div class="course-main-info">
@@ -32,14 +44,20 @@
 <content>
     <div class="course-lesson">
         <div class="lesson-content">
-            <div id="title">Занятие 1</div>
-            <div id="lesson-icon"><img src="../img/lesson1.png" width="150px"></div>
+            <div id="title">Занятие 1. Статья</div>
+            <div id="lesson-icon"><img src="~/img/lesson1.png" width="150px"></div>
             <div id="dificult">Сложность <i class="fa fa-star"> </i><i class="fa fa-star"></i></div>
             <div id="descript">Вводное занятие. Изучение основ ООП. Наследование, полиморфизм, инкапсуляция.</div>
         </div>
         <div class="lesson-content">
-            <div id="title">Занятие 2</div>
-            <div id="lesson-icon"><img src="../img/lesson1.png" width="150px"></div>
+            <div id="title">Занятие 2. Видеоурок</div>
+            <div id="lesson-icon"><img src="~/img/lesson1.png" width="150px"></div>
+            <div id="dificult">Сложность <i class="fa fa-star"> </i><i class="fa fa-star"></i></div>
+            <div id="descript">Создание иерархии классов. Интерфейсы и абстрактные классы.</div>
+        </div>
+        <div class="lesson-content">
+            <div id="title">Занятие 3. Онлайн трансляция. Разбор ошибок</div>
+            <div id="lesson-icon"><img src="~/img/lesson1.png" width="150px"></div>
             <div id="dificult">Сложность <i class="fa fa-star"> </i><i class="fa fa-star"></i></div>
             <div id="descript">Создание иерархии классов. Интерфейсы и абстрактные классы.</div>
         </div>

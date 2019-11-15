@@ -6,16 +6,19 @@ using EducationPortalASP.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using EducationPortalASP.ViewModel;
+using EducationPortalASP.Data;
 
 namespace EducationPortalASP.Controllers
 {
     public class ProfileController : Controller
     {
         private readonly UserManager<Account> userManager;
+        private readonly EducationPortalContext db;
 
-        public ProfileController(UserManager<Account> userManager)
+        public ProfileController(UserManager<Account> userManager, EducationPortalContext db)
         {
             this.userManager = userManager;
+            this.db = db;
         }
 
         public IActionResult Index()
@@ -28,7 +31,8 @@ namespace EducationPortalASP.Controllers
                 Sertificate = user.Sertificate,
                 FullName = user.FullName,
                 Education = user.Education,
-                Skills = user.Skills
+                Skills = user.Skills,
+                Courses = db.Courses.Where(c => c.User.UserName == user.UserName).Take(50)
             };
             return View(model);
         }
