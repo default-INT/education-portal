@@ -92,7 +92,7 @@ header{
   z-index: 5;
   width: 180px;
 	font-size: 20px;
-  opacity: 0;
+  opacity: 1;
   transform: scaleY(0);
   transform-origin: 0 0;
   transition: .5s ease-in-out;
